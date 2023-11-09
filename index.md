@@ -4,7 +4,7 @@ layout: home
 
 Compendium of nostr clients and known features.
 
-Contribute on github: <{{ site.github.repository_url }}>
+Contribute on github: <https://github.com/{{ site.repository }}>
 
 <div class="bigtable">
 <table>
