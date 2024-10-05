@@ -4,7 +4,7 @@ layout: home
 
 Compendium of nostr clients and known features.
 
-Contribute on github: <https://github.com/{{ site.repository }}>
+Contribute on github: <{{ site.repository_url }}>
 
 <div class="bigtable">
 <table>
@@ -33,7 +33,10 @@ Contribute on github: <https://github.com/{{ site.repository }}>
       {% else %}
       <td>{{ client.alias }}</td>
       {% endif %}
-      <td><a href="{{ client.repo }}">{{ client.repo | split: "://" | last | split: "/" | first }}</a></td>
+      <!-- <td><a href="{{ client.repo }}">{{ client.repo | split: "://" | last | split: "/" | first }}</a></td> -->
+      <td><a href="{{ client.repo }}">
+        <img alt="" src="https://img.shields.io/github/last-commit/{{ client.repo | split: '/' | slice: -2, 2 | join: '/' }}">
+        </a></td>
       <td>{{ client.latest }}</td>
       <td>{{ client.purpose }}</td>
       <!-- Features -->
